@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+  <button onclick="carregarfilme()">listar nomes</button>
+  </body>
+  
+  <script>
+const carregarfilme = async()=>{
+    var myUrl = 'https://pastebin.com/raw/FWrSkJH1';
+    var proxy = 'https://cors-anywhere.herokuapp.com/';
+const res = await fetch(proxy+myUrl,{
+
+method:"GET"
+});
+const data = await res.json();
+  
+console.log(data[0].nome);
+  
+const data1 = data[0].nome; 
+  document.write(data1);
+}
+
+//carregarfilme();
+ 
+
+ //https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Document/write
+
+//https://github.com/Rob--W/cors-anywhere/issues/301
+
+//https://pastebin.com/raw/ycwqYKZJ
+</script>
+</html>
