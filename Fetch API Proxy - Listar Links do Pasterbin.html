@@ -1,13 +1,13 @@
 
 <html>
 <body>
-	<h1>Página HTML</h1> 
+  <h1>Página HTML</h1> 
   <button onclick="carregarNome()">Listar Links</button>
 
-	<script type="text/javascript">
-		const carregarNome = async()=>{
-    var myUrl = 'https://pastebin.com/raw/htinJKEF';
-    var proxy = 'https://cors-anywhere.herokuapp.com/';
+<script type="text/javascript">
+const carregarNome = async()=>{
+var myUrl = 'https://pastebin.com/raw/htinJKEF';
+var proxy = 'https://cors-anywhere.herokuapp.com/';
 const res = await fetch(proxy+myUrl,{
 
 method:"GET"
@@ -33,8 +33,9 @@ document.write(data_name[2].nome);
 //https://github.com/Rob--W/cors-anywhere/issues/301
 
 //https://pastebin.com/raw/ycwqYKZJ
-	</script>
 
+</script>
+	
 </body>
 </html>
 
