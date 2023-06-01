@@ -1,0 +1,41 @@
+
+<html>
+<body>
+	<h1>Página HTML</h1> 
+  <button onclick="carregarNome()">Listar Links</button>
+
+	<script type="text/javascript">
+		const carregarNome = async()=>{
+    var myUrl = 'https://pastebin.com/raw/htinJKEF';
+    var proxy = 'https://cors-anywhere.herokuapp.com/';
+const res = await fetch(proxy+myUrl,{
+
+method:"GET"
+});
+const data = await res.json();
+  
+console.log(data);
+  
+const data_name = data; 
+document.write(data_name[2].nome);
+}
+
+//carregarNome();
+
+//https://pastebin.com/raw/FWrSkJH1
+ 
+// Documentação API Fetch Proxy:
+
+//https://developer.mozilla.org/pt-BR/docs/Web/API/Element/innerHTML
+
+//https://developer.mozilla.org/en-US/docs/Web/API/Document/write
+
+//https://github.com/Rob--W/cors-anywhere/issues/301
+
+//https://pastebin.com/raw/ycwqYKZJ
+	</script>
+
+</body>
+</html>
+
+	
