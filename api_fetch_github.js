@@ -34,3 +34,16 @@ async function main(){
 
 main()
     
+
+
+
+function main(){
+  const user = "talilotarlison"
+  const url = "https://api.github.com/users/"
+  fetch(url+user)
+    .then(async(response)=>{
+    return await response.json()
+  }).then((user)=>{console.log(user)})
+}
+
+main()
